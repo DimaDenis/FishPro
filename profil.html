@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <title>Pescarul Roman</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+</head>
+
+<body>
+<div class="modal fade" id="login" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Logheaza-te</h4>
+            </div>
+            <div class="modal-form">
+                <form action="">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="nume" class="control-label">Nume:</label>
+                            <input type="text" class="form-control" id="nume">
+                        </div>
+                        <div class="form-group">
+                            <label for="parola" class="control-label">Parola:</label>
+                            <input type="text" class="form-control" id="parola">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <span class="pull-left"><a href="" data-toggle="modal" data-target="#forgot" data-dismiss="modal">Ti-ai uitat parola?</a></span>
+                        <button type="submit" class="btn btn-success">Logheaza-te</button>
+                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#register" data-dismiss="modal">Inregistreaza-te</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="forgot" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Recuperare parola</h4>
+            </div>
+            <div class="modal-form">
+                <form action="">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="email" class="control-label">Email:</label>
+                            <input type="email" class="form-control" id="email">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success">Trimite</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="logout" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Delogheaza-te</h4>
+            </div>
+            <div class="modal-form">
+
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success">Confirma</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="register" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Inregistreaza-te</h4>
+            </div>
+            <div class="modal-form">
+                <form action="">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="name" class="control-label">Nume:</label>
+                            <input type="text" class="form-control" id="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="control-label">Parola:</label>
+                            <input type="text" class="form-control" id="password">
+                        </div>
+                        <div class="form-group">
+                            <label for="retype-password" class="control-label">Verifica Parola:</label>
+                            <input type="text" class="form-control" id="retype-password">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success">Inregistreaza-te</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 text-center-sm">
+                <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+            </div>
+            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 text-right" id="search">
+                <div class="col-lg-6 col-md-6 col-sm-7 col-xs-12 nopadding">
+                    <ul class="nav-header">
+                        <li id="header-dropdown">
+                            <a href="#">
+                                <span class="fa fa-user"></span> Contul Meu<span class="caret"></span>
+                            </a>
+                            <ul>
+                                <li><a href="cont.html">Profil</a></li>
+                                <li><a href="" data-toggle="modal" data-target="#login">Autentificare</a></li>
+                                <li><a href="" data-toggle="modal" data-target="#logout">Delogare</a></li>
+                                <li><a href="favorite.html">Produse Favorite</a></li>
+                                <li><a href="comenzi.html">Comenzile Mele</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="cos.html"><span class="fa fa-shopping-cart"></span> Cosul meu</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-5 col-xs-12 nopadding">
+                    <ul class="nav-header icons">
+                        <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+                        <li><a href="#"><span class="fa fa-twitter"></span></a></li>
+                        <li><a href="#"><span class="fa fa-youtube"></span></a></li>
+                        <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-11 col-md-11">
+                    <div class="col-lg-12 col-xs-12 nopadding">
+                        <form action="search.html" class="form-inline" role="form">
+                            <label for="form-search"></label>
+                            <select name="" id="form-search" class="form-control">
+                                <option value="all" selected="">Toate Categoriile</option>
+                                <option value="Crap">Crap</option>
+                                <option value="Feeder">Feeder</option>
+                                <option value="Stationar">Stationar</option>
+                                <option value="Rapitor">Rapitor</option>
+                                <option value="Copca">Copca</option>
+                                <option value="Marin">Marin</option>
+                                <option value="Camping">Camping</option>
+                                <option value="Bagajerie">Bagajerie</option>
+                                <option value="Hobby">Hobby</option>
+                                <option value="Promotii">Promotii</option>
+                            </select>
+                            <input type="text" class="form-control" placeholder="Cauta produs...">
+                            <button type="submit" class="form-control">
+                                <span class="fa fa-search"></span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-1 col-md-1">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav class="navbar navbar-custom navbar-default navbar-static-top" id="navbar-fixed" data-spy="affix" data-offset-top="150">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-down" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand hidden-md hidden-lg hidden-sm" href="#">Fish-Pro</a>
+        </div>
+
+        <div id="navbar-down" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="divider-vertical hidden-xs"></li>
+                <li><a href="crap.html">Crap</a></li>
+                <li class="divider-vertical hidden-xs"></li>
+                <li><a href="feeder.html">Feeder</a></li>
+                <li class="divider-vertical hidden-xs"></li>
+                <li><a href="stationar.html">Stationar</a></li>
+                <li class="divider-vertical hidden-xs"></li>
+                <li><a href="rapitor.html">Rapitor</a></li>
+                <li class="divider-vertical hidden-xs"></li>
+                <li><a href="copca.html">Copca</a></li>
+                <li class="divider-vertical hidden-xs"></li>
+                <li><a href="marin.html">Marin</a></li>
+                <li class="divider-vertical hidden-xs"></li>
+                <li><a href="camping.html">Camping</a></li>
+                <li class="divider-vertical hidden-xs"></li>
+                <li><a href="bagajerie.html">Bagajerie</a></li>
+                <li class="divider-vertical hidden-xs"></li>
+                <li><a href="hobby.html">Hobby</a></li>
+                <li class="divider-vertical hidden-xs"></li>
+                <li><a href="promotii.html">Promotii</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-xs-12">
+                <div class="category">
+                    <h4><span><span class="fa fa-bars"></span> Contul meu</span></h4>
+                    <ul class="list-group">
+                        <li>
+                            <a href="profil.html"> Date Personale
+                                <span class="fa fa-angle-right pull-right"></span></a>
+                        </li>
+                        <li>
+                            <a href="setari.html"> Setari siguranta
+                                <span class="fa fa-angle-right pull-right"></span></a>
+                        </li>
+                        <li>
+                            <a href="comenzi.html"> Comenzile mele
+                                <span class="fa fa-angle-right pull-right"></span></a>
+                        </li>
+                        <li>
+                            <a href="favorite.html"> Favorite
+                                <span class="fa fa-angle-right pull-right"></span></a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="col-lg-9 col-md-9 col-xs-12">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <section class="best-seller">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h2 class="text-center">Profil</h2>
+
+                                    <div class="profil-details">
+                                        <h3>Date Personale</h3>
+                                        <form class="form-horizontal">
+                                            <div class="form-group">
+                                                <label for="changeName" class="col-sm-2 control-label">Nume
+                                                    Prenume:</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="changeName"
+                                                           placeholder="Popescu Ion">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="changeEmail" class="col-sm-2 control-label">Email:</label>
+                                                <div class="col-sm-10">
+                                                    <input type="email" class="form-control" id="changeEmail"
+                                                           placeholder="office@pescarulroman.ro">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="changeTelephone"
+                                                       class="col-sm-2 control-label">Mobil:</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="changeTelephone"
+                                                           placeholder="07xx xxx xxx">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="changeDate" class="col-sm-2 control-label">Data
+                                                    nasterii:</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="changeDate"
+                                                           placeholder="01 Aprilie 2016">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="changeEducatie"
+                                                       class="col-sm-2 control-label">Educatie:</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="changeEducatie"
+                                                           placeholder="Facultate">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-sm-offset-2 col-sm-10">
+                                                    <button type="submit" class="btn btn-success">Salveaza</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="best-seller">
+                            <div class="row">
+                                <div class="col-lg-12">
+
+                                    <div class="profil-details">
+                                        <h3>Adrese livrare</h3>
+                                        <form class="form-horizontal">
+                                            <div class="form-group">
+                                                <label for="changeAdress" class="col-sm-2 control-label">Adresa
+                                                    livrare:</label>
+                                                <div class="col-sm-10">
+                                                    <textarea class="form-control" id="changeAdress"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="col-sm-offset-2 col-sm-10">
+                                                    <button type="submit" class="btn btn-success">Salveaza</button>
+                                                    <button type="submit" class="btn btn-danger">Sterge</button>
+                                                    <button type="submit" class="btn btn-warning">Adauga</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</main>
+
+<footer class="text-center-sm">
+    <div class="wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 col-sm-8 col-xs-12">
+                    <div class="col-lg-12">
+                        <h3>Cautare Rapida</h3>
+                    </div>
+                    <div class="hidden-lg hidden-md hidden-sm col-xs-2"></div>
+                    <div class="col-lg-6 col-sm-4 col-xs-4">
+                        <ul class="list-group">
+                            <li><a href="despre.html">Despre noi</a></li>
+                            <li><a href="conditii.html">Conditii utilizare</a></li>
+                            <li><a href="faq.html">Cum Cumpar?</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-sm-4 col-xs-4">
+                        <ul class="list-group" id="right-ul">
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="anpc.html">ANPC</a></li>
+                            <li><a href="b2b.html">B2B</a></li>
+                        </ul>
+                    </div>
+                    <div class="hidden-lg hidden-md hidden-sm col-xs-2"></div>
+                </div>
+                <div class="col-lg-3 col-sm-4 col-xs-12">
+                    <h3>Inscriete la newsletter</h3>
+                    <p>Primesti ultimile oferte pe e-mail</p>
+                    <form action="" class="form-inline newsletter" role="form">
+                        <input type="email" class="form-control" placeholder="Email">
+                        <button class="form-control">Send</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="text-center">
+                        &copy; Copyright 2016 <a href="http://prestige-it.ro/">PrestigeIT</a> | All Rights Reserved |
+                        Powered by <a href="http://prestige-it.ro/">PrestigeIT</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://use.fontawesome.com/4bdd10b123.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+        integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
